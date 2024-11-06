@@ -90,27 +90,32 @@ fun Adventures(modifier: Modifier = Modifier) {
     var Departuresv by remember { mutableStateOf("") }
     var arrivalsv by remember { mutableStateOf("") }
 
-    Column(modifier = Modifier.fillMaxSize().
-    background(Color.White))
+    Column(
+        modifier = Modifier.fillMaxSize().background(Color.White)
+    )
     {
         HeaderSection()
 
         Column(modifier = Modifier.fillMaxWidth().padding(16.dp))
         {
-            Text(text = "Plan Your Adventures",
+            Text(
+                text = "Plan Your Adventures",
                 color = Color.Black, fontSize = 25.sp,
-                fontWeight = FontWeight.Bold)
+                fontWeight = FontWeight.Bold
+            )
             Spacer(modifier = Modifier.height(4.dp))
 
-            Text(text = "Plan Your Adventures",
+            Text(
+                text = "Plan Your Adventures",
                 color = Color.Gray, fontSize = 20.sp,
-                fontWeight = FontWeight.Bold)
+                fontWeight = FontWeight.Bold
+            )
 
             Spacer(modifier = Modifier.height(16.dp))
 
             OutlinedTextField(
                 value = origin,
-                onValueChange = {origin = it},
+                onValueChange = { origin = it },
                 label = { Text("Asal Daerah") },
                 leadingIcon = { Icon(Icons.Default.Email, contentDescription = null) },
                 modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp)
